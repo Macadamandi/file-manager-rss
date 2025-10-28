@@ -1,0 +1,13 @@
+{
+  "name": "file-manager",
+  "version": "1.0.0",
+  "description": "File manager in accordance with the assignment from RS School",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Vladyslav Yurchenko (@macadamandi)",
+  "license": "ISC",
+  "type": "module"
+}

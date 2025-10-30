@@ -1,5 +1,5 @@
 import resolvePath from "../utils/getAbsolutePath.js";
-import { userHomeDir } from "../utils/getHomeDir.js";
+import { userHomeDir } from "../utils/getDirectory.js";
 import path from "node:path";
 
 const changeDir = (inputPath) => {

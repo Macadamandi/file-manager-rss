@@ -1,6 +1,6 @@
 import showFarewellMessage from "../utils/farewellMessage.js";
 import showInvalidInputMessage from "../utils/invalidInputMessage.js";
-import { showCurrentDir } from "../utils/getHomeDir.js";
+import { showCurrentDir } from "../utils/getDirectory.js";
 import {
   ExitCommands,
   RouteCommands,
@@ -39,7 +39,7 @@ const cliHandler = (username) => {
         await navigationHandler(command, args[0]);
         break;
       case fileCommands.includes(command):
-        fileOperationsHandler(command, args);
+        await fileOperationsHandler(command, args);
         break;
       case OS === command && osCommands.includes(args[0]):
         osInfoHandler(command, args[0]);

@@ -1,4 +1,4 @@
-import { userHomeDir } from "../utils/getHomeDir.js";
+import { userHomeDir } from "../utils/getDirectory.js";
 import resolvePath from "../utils/getAbsolutePath.js";
 
 const navigateUp = () => {

@@ -15,7 +15,7 @@ const listDir = async () => {
 
     console.table(table);
   } catch (err) {
-    console.error("Operation failed:", err.message);
+    console.log("Operation failed:", err.message);
   }
 };
 

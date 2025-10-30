@@ -1,5 +1,5 @@
 import cliHandler from "./src/cli/cliHandler.js";
-import { userHomeDir, showCurrentDir } from "./src/utils/getHomeDir.js";
+import { userHomeDir, showCurrentDir } from "./src/utils/getDirectory.js";
 
 const run = () => {
   const args = process.argv.slice(2);

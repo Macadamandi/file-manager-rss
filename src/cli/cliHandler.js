@@ -42,7 +42,7 @@ const cliHandler = (username) => {
         await fileOperationsHandler(command, args);
         break;
       case OS === command && osCommands.includes(args[0]):
-        osInfoHandler(command, args[0]);
+        osInfoHandler(args[0]);
         break;
       case hashCommands.includes(command):
         hashCalculationHandler(command, args);

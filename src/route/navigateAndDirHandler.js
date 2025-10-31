@@ -5,15 +5,10 @@ import changeDir from "./changeDir.js";
 import navigateUp from "./navigateUp.js";
 
 const navigationHandler = async (command, args) => {
-  if (command === RouteCommands.up) {
-    navigateUp();
-  } else if (command === RouteCommands.ls) {
-    await listDir();
-  } else if (command === RouteCommands.cd) {
-    changeDir(args);
-  } else {
-    showUnknownCommandMessage(command);
-  }
+  if (command === RouteCommands.up) navigateUp();
+  else if (command === RouteCommands.ls) await listDir();
+  else if (command === RouteCommands.cd) changeDir(args);
+  else showUnknownCommandMessage(command);
 };
 
 export default navigationHandler;

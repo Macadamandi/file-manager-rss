@@ -45,7 +45,7 @@ const cliHandler = (username) => {
         osInfoHandler(args[0]);
         break;
       case hashCommands.includes(command):
-        hashCalculationHandler(command, args);
+        await hashCalculationHandler(command, args);
         break;
       case compressionCommands.includes(command):
         compressionHandler(command, args);

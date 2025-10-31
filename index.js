@@ -3,18 +3,8 @@ import { userHomeDir, showCurrentDir } from "./src/utils/getDirectory.js";
 
 const run = () => {
   const args = process.argv.slice(2);
-  const usernames = args
-    .filter((arg) => arg.startsWith("--username="))
-    .map((arg) => arg.split("=")[1])
-    .filter(Boolean);
-
-  let username;
-
-  if (usernames.length > 0) {
-    username = usernames[usernames.length - 1];
-  } else {
-    username = "Guest";
-  }
+  const usernameArg = args.find((arg) => arg.startsWith("--username="));
+  const username = usernameArg ? usernameArg.split("=")[1] : "Guest";
 
   process.chdir(userHomeDir);
 

@@ -14,7 +14,7 @@ import navigationHandler from "../route/navigateAndDirHandler.js";
 import fileOperationsHandler from "../fs/basicFileOperationsHandler.js";
 import osInfoHandler from "../os/osInfoHandler.js";
 import hashCalculationHandler from "../crypto/hashCalculationHandler.js";
-import compressionHandler from "../zlib/brotliCompressionHandler.js";
+import compressionHandler from "../zlib/compressionHandler.js";
 
 const exitCommands = Object.values(ExitCommands);
 const routeCommands = Object.values(RouteCommands);
@@ -48,7 +48,7 @@ const cliHandler = (username) => {
         await hashCalculationHandler(command, args);
         break;
       case compressionCommands.includes(command):
-        compressionHandler(command, args);
+        await compressionHandler(command, args);
         break;
       default:
         showInvalidInputMessage();
